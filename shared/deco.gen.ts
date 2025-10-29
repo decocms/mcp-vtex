@@ -8317,16 +8317,7 @@ export type Mcp<T extends Record<string, (input: any) => Promise<any>>> = {
     };
 };
 
-export const StateSchema = z.object({
-  AI_GATEWAY: z.object({
-    value: z.string(),
-    __type: z.literal("@deco/ai-gateway").default("@deco/ai-gateway"),
-  }),
-  DATABASE: z.object({
-    value: z.string(),
-    __type: z.literal("@deco/database").default("@deco/database"),
-  }),
-});
+export const StateSchema = z.object({});
 
 export interface Env {
   DECO_CHAT_WORKSPACE: string;
