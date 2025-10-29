@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mcp-vtex": {
+      "type": "http",
+      "url": "https://localhost-08127134.deco.host/mcp"
+    }
+  }
+}
