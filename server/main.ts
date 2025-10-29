@@ -13,6 +13,7 @@ import {
 
 import { tools } from "./tools/index.ts";
 import { views } from "./views.ts";
+import z from "zod";
 
 /**
  * This Env type is the main context object that is passed to
@@ -58,7 +59,12 @@ const runtime = withRuntime<Env, typeof StateSchema>({
      * fields to the state schema, like asking for an API Key
      * for connecting to a third-party service.
      */
-    state: StateSchema,
+    state: StateSchema.extend({
+      vtexAccount: z.string().describe("VTEX account"),
+      vtexAppKey: z.string().describe("VTEX App Key"),
+      vtexAppToken: z.string().describe("VTEX App Token"),
+      publicUrl: z.string().describe("Public URL"),
+    }),
   },
   views,
   tools,

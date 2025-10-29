@@ -5,13 +5,12 @@
  * export, making it easy to import all tools in main.ts while keeping
  * the domain separation.
  */
-import { todoTools } from "./todos.ts";
-import { userTools } from "./user.ts";
+
+import { createListOrdersTool } from "./orders/list.ts";
 
 // Export all tools from all domains
 export const tools = [
-  ...todoTools,
-  ...userTools,
+  createListOrdersTool,
 ];
 
 // Re-export domain-specific tools for direct access if needed

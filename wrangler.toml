@@ -16,12 +16,6 @@ workspace = "deco-team"
 enable_workflows = false
 local = false
 
-[[deco.bindings]]
-name = "AI_GATEWAY"
-type = "mcp"
-integration_name = "@deco/ai-gateway"
-
-[[deco.bindings]]
-name = "DATABASE"
-type = "mcp"
-integration_name = "@deco/database"
+[deco.integration]
+friendlyName = "VTEX [New]"
+icon = "https://assets.decocache.com/mcp/0d6e795b-cefd-4853-9a51-93b346c52c3f/VTEX.svg"
