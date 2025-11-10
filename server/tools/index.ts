@@ -7,10 +7,12 @@
  */
 
 import { createListOrdersTool } from "./orders/list.ts";
+import { createGetOrderTool } from "./orders/get.ts";
 
 // Export all tools from all domains
 export const tools = [
   createListOrdersTool,
+  createGetOrderTool,
 ];
 
 // Re-export domain-specific tools for direct access if needed
